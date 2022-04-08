@@ -9,8 +9,8 @@ int main()
 	for(i = 'a'; i < 'z'; i++)
 		putchar(i);
 
-		for(x = 'A'; x< 'z'; x++)
-			putchar(x);
+	for(x = 'A'; x< 'z'; x++)
+		putchar(x);
 
 
 	putchar('\n');
