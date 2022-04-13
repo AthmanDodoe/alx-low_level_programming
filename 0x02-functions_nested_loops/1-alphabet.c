@@ -1,9 +1,8 @@
-#include <stdio.h>
 #include <main.h>
 
 void print_alphabet(void)
 {
-int n;
+	char n = 'a';
 
 	for (n = 'a'; n <= 'z'; n++)
 	{
