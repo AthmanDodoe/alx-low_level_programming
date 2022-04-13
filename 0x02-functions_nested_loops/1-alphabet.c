@@ -1,20 +1,13 @@
 #include <stdio.h>
 
-void print_alphabet(void);
-
-int main(void)
+void print_alphabet(void)
 {
+int n;
 
-        char i = 'a';   
-
-void print_alphabet(void){
-	for (i = 'a'; i < 'z'; i++)
+	for (n = 'a'; n <= 'z'; n++)
 	{
-		putchar(i);
-                }
-                	putchar('\n');
-        }
-
-        print_alphabet();
-        return 0;
+		_putchar(n);
+	}
+	_putchar('\n');
 }
+
