@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.>
+#include <stdlib.h>
 /**
  * main - print the number of arguments in the program.
  * @argc: argument count or size of arguments.
@@ -7,9 +7,15 @@
  *
  * Return: always 0.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int number = 0;
 
-printf("argc:%d\n",argc);
-return (0);
+	while (number < argc)
+	{
+		number++;
+		(*argv)++;
+	}
+	printf("%i\n", number - 1);
+	return (0);
 }
