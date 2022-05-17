@@ -9,11 +9,13 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	int num;
-	va_list str;
 
-	va_start(str, n);
+	var list Numbers;	
+	 int i;
+	int num;
+
+
+	va_start(Numbers, n);
 
 	for (i = 0; i < n; i++)
 	{
@@ -25,7 +27,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 		}
 	}
-	va_end(str);
+	va_end(Numbers);
 
 	printf("\n");
 }
