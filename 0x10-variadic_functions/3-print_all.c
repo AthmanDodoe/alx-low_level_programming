@@ -11,9 +11,10 @@ void print_all(const char * const format, ...)
 {
 	va_list any;
 	char *string;
-	int i = 0;
+	int i;
 
 	va_start(any, format);
+	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
 		switch (format[i])
@@ -39,7 +40,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-		format[i] == 's') && format[(i + 1)] != '\0')
+		     format[i] == 's') && format[(i + 1)] != '\0')
 			printf(", ");
 		i++;
 	}
