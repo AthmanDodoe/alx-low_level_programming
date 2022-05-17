@@ -1,28 +1,31 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 #include <stdarg.h>
-
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int sum_them_all(const unsigned int n, ...);
+int _putchar(char c);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-void _printchar(va_list list);
-void _printstr(va_list list);
-void _printfloat(va_list list);
-void _printint(va_list list);
-
-
 
 /**
- * struct checker - A new struct type defining a priter.
- * @type: representing a data type.
- * @f: funtion pointer
+ * struct format - Finds format info.
+ *
+ * @flag: flag to format struct.
+ * @f: Call back function.
  */
-typedef struct checker
+typedef struct format
 {
-char *type;
-void (*f)();
-} checker;
+	char *flag;
+	void (*f)(va_list);
+} formatter;
+
+void print_int(va_list);
+void print_char(va_list);
+void print_float(va_list);
+void print_string(va_list);
 
 #endif
